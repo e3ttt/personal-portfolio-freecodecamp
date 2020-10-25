@@ -4,17 +4,60 @@
     <title>Ed's Portfolio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mate&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
     <script
       src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
       defer
     ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#projects">Go to projects</a></li>
+        <li>
+          <a
+            id="profile-link"
+            href="https://www.github.com/e3ttt"
+            target="_blank"
+            >My Github</a
+          >
+        </li>
+      </ul>
+    </nav>
     <section id="welcome-section">
-      <h1>Hello, I'm Ed. I'm a self-learned (aspiring) developer.</h1>
+      <div class="welcome-message-container">
+        <h1 class="slide-1">Hello, I'm Ed.</h1>
+
+        <p class="slide-2">I'm a self-taught (aspiring) developer.</p>
+
+        <div class="cta">
+          <p>Check below my projects</p>
+          <p><ion-icon name="chevron-down-outline"></ion-icon></p>
+        </div>
+      </div>
     </section>
 
-    <section id="projects"></section>
+    <section id="projects">
+      <a
+        href="https://e3ttt.github.io/tribute-page-freecodecamp/"
+        target="_blank"
+      >
+        <div class="project-container">
+          <h2 class="project-tile">Tribute page</h2>
+        </div>
+      </a>
+    </section>
   </body>
 </html>

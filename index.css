@@ -1,0 +1,115 @@
+:root {
+  --magenta: #8d0095;
+  --accent-color: #1d9500;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mate', serif;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+#navbar li {
+  list-style-type: none;
+}
+
+#navbar ul {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, #8d0095cc, #8d0095dd),
+    url('images/keyboard.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+#welcome-section p,
+#welcome-section h1 {
+  text-align: center;
+  margin-left: -4000px;
+  font-size: 2rem;
+}
+
+.slide-1 {
+  animation-name: from-left;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.slide-2 {
+  animation-name: from-left;
+  animation-duration: 1s;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+}
+
+.welcome-message-container {
+  border: 2px solid #ffffff00;
+  padding: 2rem;
+  border-radius: 1rem;
+  animation-name: border-appear;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes from-left {
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes border-appear {
+  100% {
+    border: 2px solid #ffffffff;
+  }
+}
+
+.cta {
+  opacity: 0;
+  background-color: var(--accent-color);
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px black;
+  padding-top: 0.5rem;
+  margin-top: 1rem;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+#welcome-section .cta p {
+  margin: 0;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 460px) {
+}

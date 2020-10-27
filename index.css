@@ -105,10 +105,82 @@ body {
   margin: 0;
 }
 
+.cta a {
+  color: white;
+}
+
+.cta a:hover {
+  color: #ccc;
+}
+
 @keyframes fade-in {
   100% {
     opacity: 1;
   }
+}
+
+#projects {
+  padding: 10px;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 20vw;
+  height: 450px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-tile {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.project-front {
+  overflow: hidden;
+}
+
+.project-front,
+.project-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.project-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.project-back a {
+  color: white;
+}
+
+.image-container {
+  padding: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 460px) {

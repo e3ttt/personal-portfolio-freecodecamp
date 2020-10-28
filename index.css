@@ -17,6 +17,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
+  padding: 20px;
 }
 
 #navbar a {
@@ -26,6 +27,7 @@ body {
 
 #navbar li {
   list-style-type: none;
+  font-weight: bold;
 }
 
 #navbar ul {
@@ -121,12 +123,30 @@ body {
 
 #projects {
   padding: 10px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#projects h2 {
+  margin: 30px 0;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+  justify-items: center;
+  width: 50vw;
 }
 
 .flip-box {
   background-color: transparent;
   width: 20vw;
+  min-width: 300px;
   height: 450px;
+  max-height: 450px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
 }
@@ -168,6 +188,16 @@ body {
   background-color: #555;
   color: white;
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.link-container {
+  border: 1px solid white;
+  padding: 30px;
+  border-radius: 30px;
 }
 
 .project-back a {
@@ -183,5 +213,33 @@ body {
   height: auto;
 }
 
+@media (max-width: 1200px) {
+  .projects-container {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-container {
+    width: 100vw;
+  }
+}
+
 @media (max-width: 460px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    width: 90vw;
+  }
+
+  .flip-box {
+    width: 100%;
+  }
+
+  #navbar ul {
+    width: 100%;
+  }
+
+  #welcome-section {
+    padding: 0 20px;
+  }
 }
